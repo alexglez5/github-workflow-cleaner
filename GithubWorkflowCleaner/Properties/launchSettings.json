@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "GithubWorkflows": {
+      "commandName": "Project"
+    }
+  }
+}
