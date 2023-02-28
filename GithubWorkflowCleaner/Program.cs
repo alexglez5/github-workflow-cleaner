@@ -23,6 +23,8 @@ namespace GithubWorkflowCleaner
 
         private static void CleanUpWorkflows(string org, string repo, int minRunsToKeep)
         {
+            Console.WriteLine($"Cleaning up workflows at {org}/{repo}.");
+            
             var actions = $"{org}/{repo}/actions";
             var workflowIdsString = Run($"gh api -X GET /repos/{actions}/workflows | jq \".workflows[] | .id\"");
 
